@@ -3,7 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Rick&Morty</title>
   </head>
-  <body></body>
+
+  <body>
+    <main class="container">
+      <h1>Rick & Morty</h1>
+      <button class="request-btn">Personajes</button>
+      <button class="toggle-filters-btn">Ver filtros</button>
+      <form class="filters">
+        <div class="input-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="input-group">
+          <label for="species">Especie</label>
+          <input type="text" id="species" name="species" />
+        </div>
+
+        <div class="input-group">
+          <label for="type">Tipo</label>
+          <input type="text" id="type" name="type" />
+        </div>
+
+        <div class="input-group">
+          <label for="status">Estado</label>
+          <div class="radio-group">
+            <input type="radio" id="status1" name="status" value="alive" />
+            <label for="status1">Vivo</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="status2" name="status" value="dead" />
+            <label for="status2">Muerto</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="status3" name="status" value="unknown" />
+            <label for="status3">Desconocido</label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="gender">Genero</label>
+          <div class="radio-group">
+            <input type="radio" id="gender1" name="gender" value="female" />
+            <label for="gender1">Femenino</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="gender2" name="gender" value="male" />
+            <label for="gender2">Masculino</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="gender3" name="gender" value="genderless" />
+            <label for="gender3">Sin genero</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="gender4" name="gender" value="unknown" />
+            <label for="gender4">Desconocido</label>
+          </div>
+        </div>
+        <button>Filtrar</button>
+      </form>
+      <ul class="character-list"></ul>
+    </main>
+    <footer>Guido Cardarelli - DAW 2024</footer>
+  </body>
+  <script src="script.js"></script>
 </html>
