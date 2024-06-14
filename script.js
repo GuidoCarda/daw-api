@@ -16,6 +16,10 @@ toggleFiltersBtn.addEventListener("click", function () {
     ? "Ver filtros"
     : "Ocultar filtros";
 
+  if (filterForm.classList.contains("show")) {
+    filterForm.reset();
+  }
+
   filterForm.classList.toggle("show");
 });
 
